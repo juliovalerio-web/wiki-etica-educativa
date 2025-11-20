@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki: Principios Éticos en Tecnologías Educativas Digitales</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        
+        .sidebar {
+            width: 280px;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+        
+        .sidebar h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        
+        .sidebar nav ul {
+            list-style: none;
+        }
+        
+        .sidebar nav ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .sidebar nav ul li a {
+            color: #555;
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .sidebar nav ul li a:hover {
+            background: #f0f0ff;
+            color: #667eea;
+            padding-left: 1rem;
+        }
+        
+        .sidebar nav ul ul {
+            margin-left: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+        .sidebar nav ul ul li a {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .main-content {
+            flex: 1;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .breadcrumb {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .section h3 {
+            color: #764ba2;
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+        
+        .section h4 {
+            color: #555;
+            font-size: 1.1rem;
+            margin: 1rem 0 0.5rem 0;
+        }
+        
+        .section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        .highlight-box {
+            background: #f0f0ff;
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        
+        .highlight-box strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        
+        ul.styled-list {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        ul.styled-list li {
+            margin-bottom: 0.8rem;
+            line-height: 1.8;
+        }
+        
+        .info-card {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .info-card h4 {
+            color: #667eea;
+            margin-bottom: 0.8rem;
+        }
+        
+        .section-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 1.5rem auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .principle-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 1rem auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .link-internal {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #667eea;
+        }
+        
+        .link-internal:hover {
+            color: #764ba2;
+            border-bottom: 1px solid #764ba2;
+        }
+        
+        .back-to-top {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+        }
+        
+        .back-to-top a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .footer p {
+            margin: 0.5rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <div style="background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+                    <div style="font-family: Georgia, serif; text-align: center;">
+                        <div style="font-size: 32px; font-weight: bold; color: #000; letter-spacing: 1px;">EducaNexo</div>
+                        <div style="font-size: 14px; color: #e91e63; margin-top: 5px;">Educación de calidad</div>
+                    </div>
+                </div>
+                <div>
+                    <h1>Wiki: Principios Éticos en Tecnologías Educativas</h1>
+                    <p>Guía integral para la implementación responsable de TIC e IA en educación</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>📑 Navegación</h3>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">🏠 Inicio</a></li>
+                    <li><a href="#introduccion">📖 Introducción</a></li>
+                    <li><a href="#fundamentos">🧠 Fundamentos Conceptuales</a>
+                        <ul>
+                            <li><a href="#ciudadania">Ciudadanía Digital</a></li>
+                            <li><a href="#etica-ia">Ética en IA</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#principios">⚖️ Principios Éticos</a>
+                        <ul>
+                            <li><a href="#dignidad">Dignidad Humana</a></li>
+                            <li><a href="#privacidad">Privacidad y Datos</a></li>
+                            <li><a href="#equidad">Equidad e Inclusión</a></li>
+                            <li><a href="#transparencia">Transparencia</a></li>
+                            <li><a href="#agencia">Agencia Humana</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#implementacion">🔧 Implementación</a></li>
+                    <li><a href="#conclusion">✅ Conclusión</a></li>
+                    <li><a href="#referencias">📚 Referencias</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="breadcrumb">
+                <a href="#inicio">Inicio</a> > Contenido Principal
+            </div>
+
+            <section id="inicio" class="section">
+                <h2>🏠 Bienvenida a la Wiki</h2>
+                <p><strong>Fecha de creación:</strong> Noviembre 23, 2025</p>
+                <p><strong>Autor:</strong> Julio César Valerio Toledo</p>
+                <p><strong>Institución:</strong> Doctorado en Educación - Seminario Habilidades Tecnológicas</p>
+                
+                <div class="highlight-box">
+                    <strong>Objetivo de esta Wiki</strong>
+                    Esta plataforma sirve como marco de referencia integral para instituciones educativas, docentes, desarrolladores de tecnología y legisladores, estableciendo principios éticos fundamentales que deben regir el diseño, implementación y uso de tecnologías digitales e Inteligencia Artificial en entornos educativos.
+                </div>
+
+                <p>Navega por las secciones utilizando el menú lateral para explorar cada uno de los principios éticos fundamentales para la implementación responsable de tecnologías en educación.</p>
+            </section>
+
+            <section id="introduccion" class="section">
+                <h2>📖 Introducción</h2>
+                
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80" alt="Estudiantes usando tecnología en el aula" class="section-image">
+                
+                <p>El panorama educativo contemporáneo está siendo transformado radicalmente por la integración de <strong>Tecnologías de la Información y la Comunicación (TIC)</strong> e <strong>Inteligencia Artificial (IA)</strong>. Estas herramientas poseen un potencial revolucionario para personalizar el aprendizaje, optimizar la gestión educativa y expandir el acceso al conocimiento de manera sin precedentes.</p>
+
+                <div class="warning-box">
+                    <strong>⚠️ Desafío Crítico</strong>
+                    <p>Sin embargo, su implementación conlleva riesgos y desafíos éticos complejos. La falta de una guía ética robusta puede exacerbar desigualdades existentes, vulnerar la privacidad de estudiantes y docentes, y socavar los valores fundamentales de la educación.</p>
+                </div>
+
+                <p>Es por esto que resulta imperativo establecer un marco ético sólido que garantice que la aplicación de estas tecnologías sea <strong>justa, segura, transparente y centrada en la dignidad humana</strong>. Esta wiki aborda los principios fundamentales que deben guiar este proceso de transformación digital educativa.</p>
+            </section>
+
+            <section id="fundamentos" class="section">
+                <h2>🧠 Fundamentos Conceptuales</h2>
+
+                <h3 id="ciudadania">📱 Ciudadanía Digital</h3>
+                <p>La <a href="#" class="link-internal">ciudadanía digital</a> es el concepto que define la capacidad de desenvolverse en la sociedad mediante el uso de las TIC de manera <strong>responsable, informada, segura, ética, libre y participativa</strong>.</p>
+
+                <div class="info-card">
+                    <h4>Componentes de la Ciudadanía Digital:</h4>
+                    <ul class="styled-list">
+                        <li><strong>Derechos digitales:</strong> Reconocimiento y ejercicio de derechos fundamentales en entornos digitales</li>
+                        <li><strong>Responsabilidades:</strong> Comprensión del impacto de las tecnologías en la vida personal y el entorno social</li>
+                        <li><strong>Pensamiento crítico:</strong> Capacidad de evaluar y cuestionar la información y las tecnologías</li>
+                        <li><strong>Participación activa:</strong> Involucramiento constructivo en espacios digitales</li>
+                    </ul>
+                </div>
+
+                <p>La educación ética en tecnología debe fomentar la formación de ciudadanos digitales críticos y empoderados, capaces de navegar el ecosistema digital con autonomía y responsabilidad.</p>
+
+                <h3 id="etica-ia">🤖 Ética en la Inteligencia Artificial</h3>
+                <p>La <strong>ética en la IA</strong> es una rama de la ética aplicada que aborda los desafíos morales surgidos del diseño, desarrollo, despliegue y uso de sistemas de inteligencia artificial.</p>
+
+                <p>En el contexto educativo, esto se traduce en cuestionar aspectos fundamentales como:</p>
+                <ul class="styled-list">
+                    <li>¿Cómo toman decisiones los algoritmos que afectan la trayectoria académica de los estudiantes?</li>
+                    <li>¿Cómo se gestionan y protegen los datos sensibles de la comunidad educativa?</li>
+                    <li>¿Cómo asegurar que la automatización potencie, y no reemplace, la relación pedagógica humana?</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>Principio Fundamental</strong>
+                    La tecnología debe estar al servicio de la pedagogía, no al revés. La relación humana educador-estudiante es insustituible y debe permanecer en el centro del proceso educativo.
+                </div>
+            </section>
+
+            <section id="principios" class="section">
+                <h2>⚖️ Principios Éticos Fundamentales</h2>
+
+                <h3 id="dignidad">👤 1. Dignidad Humana, Bienestar y Seguridad</h3>
+                
+                <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&q=80" alt="Estudiantes colaborando de manera saludable" class="principle-image">
+                
+                <p><strong>Principio rector:</strong> La tecnología debe estar al servicio de las personas, promoviendo su dignidad y bienestar integral, nunca comprometiéndolos. Este es el pilar fundamental sobre el que se sostienen todos los demás principios.</p>
+
+                <div class="info-card">
+                    <h4>Directrices de Aplicación:</h4>
+                    <ul class="styled-list">
+                        <li><strong>Salud Mental:</strong> Evaluar permanentemente el impacto de la tecnología en la salud mental de estudiantes y docentes (ansiedad, estrés, depresión, fatiga digital) y establecer estrategias de mitigación.</li>
+                        <li><strong>Inocuidad y No Vigilancia:</strong> Los sistemas deben ser seguros y jamás utilizarse para vigilancia masiva, calificación social o prácticas psicológica o físicamente dañinas.</li>
+                        <li><strong>Proporcionalidad:</strong> La tecnología implementada debe ser adecuada y proporcional para alcanzar fines legítimos, evitando soluciones excesivamente intrusivas.</li>
+                    </ul>
+                </div>
+
+                <h3 id="privacidad">🔒 2. Privacidad, Protección de Datos y Seguridad</h3>
+                
+                <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&q=80" alt="Seguridad y protección de datos digitales" class="principle-image">
+                
+                <p>La información personal de estudiantes y docentes es <strong>extremadamente sensible</strong>. Su protección es una obligación ética y legal que requiere marcos robustos de gobernanza de datos durante todo su ciclo de vida.</p>
+
+                <div class="info-card">
+                    <h4>Directrices de Aplicación:</h4>
+                    <ul class="styled-list">
+                        <li><strong>Ciclo de Vida de los Datos:</strong> La privacidad debe respetarse en todas las fases: recolección, almacenamiento, uso, compartimiento y eliminación.</li>
+                        <li><strong>Seguridad Técnica:</strong> Implementar medidas robustas como cifrado, acceso restringido y marcos de gobernanza claros.</li>
+                        <li><strong>Consentimiento Informado:</strong> Los usuarios deben comprender plenamente y aceptar explícitamente los riesgos, beneficios y usos de sus datos. Este consentimiento debe ser fácil de revocar.</li>
+                        <li><strong>Minimización de Datos:</strong> Recopilar únicamente los datos estrictamente necesarios para el propósito educativo declarado.</li>
+                    </ul>
+                </div>
+
+                <h3 id="equidad">🌍 3. Equidad, Inclusión y No Discriminación</h3>
+                
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&q=80" alt="Diversidad e inclusión en educación" class="principle-image">
+                
+                <p>La tecnología debe ser un <strong>puente para la igualdad de oportunidades</strong>, no un amplificador de las desigualdades educativas y sociales preexistentes.</p>
+
+                <div class="info-card">
+                    <h4>Directrices de Aplicación:</h4>
+                    <ul class="styled-list">
+                        <li><strong>Acceso Equitativo:</strong> Asegurar que todos tengan acceso igualitario a tecnología, dispositivos, conectividad y recursos, invirtiendo en cerrar brechas digitales.</li>
+                        <li><strong>Algoritmos Justos:</strong> Auditar periódicamente los sistemas de IA para identificar y eliminar sesgos algorítmicos basados en género, raza, origen socioeconómico, etc.</li>
+                        <li><strong>Diseño Universal:</strong> Las herramientas deben diseñarse para ser accesibles y útiles para todas las personas, incluyendo aquellas con discapacidades.</li>
+                        <li><strong>No Discriminación:</strong> El acceso no debe negarse debido a diferencias culturales, étnicas, de género, idioma, posición económica o cualquier otra condición.</li>
+                    </ul>
+                </div>
+
+                <h3 id="transparencia">🔍 4. Transparencia y Rendición de Cuentas</h3>
+                
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Transparencia en análisis de datos" class="principle-image">
+                
+                <p>Las operaciones y decisiones de los sistemas tecnológicos deben ser <strong>comprensibles, rastreables</strong> y estar sujetas a un claro marco de responsabilidad. La opacidad de los algoritmos representa una amenaza para la confianza.</p>
+
+                <div class="info-card">
+                    <h4>Directrices de Aplicación:</h4>
+                    <ul class="styled-list">
+                        <li><strong>Explicabilidad Contextual:</strong> Los usuarios deben saber cuándo interactúan con IA, poder solicitar explicaciones sobre decisiones y comprender los criterios básicos utilizados.</li>
+                        <li><strong>Documentación Académica:</strong> Documentar completamente el uso de IA: nombre de herramienta, propósito, prompts utilizados y resultados. Citar explícitamente su uso.</li>
+                        <li><strong>Atribución de Responsabilidad:</strong> La responsabilidad ética y jurídica debe ser siempre atribuible a personas físicas o entidades jurídicas específicas, nunca al algoritmo.</li>
+                    </ul>
+                </div>
+
+                <h3 id="agencia">🎯 5. Agencia Humana y Supervisión</h3>
+                
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Docente guiando a estudiantes con tecnología" class="principle-image">
+                
+                <p>La tecnología debe <strong>empoderar</strong> a educadores y estudiantes, no reemplazarlos. La decisión y el juicio humano deben permanecer en el centro del proceso educativo.</p>
+
+                <div class="info-card">
+                    <h4>Directrices de Aplicación:</h4>
+                    <ul class="styled-list">
+                        <li><strong>El Docente como Guía:</strong> La relación pedagógica humano-humano es insustituible. La tecnología es una herramienta para potenciar al educador, no sustituirlo.</li>
+                        <li><strong>Control del Estudiante:</strong> Los estudiantes deben tener control sobre su proceso de aprendizaje y datos personales, fomentando autonomía y autorregulación.</li>
+                        <li><strong>Decisión Humana en Casos Críticos:</strong> Decisiones cruciales sobre evaluación final, promoción o trayectoria educativa nunca deben depender exclusivamente de algoritmos.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="implementacion" class="section">
+                <h2>🔧 Principios Operativos y de Implementación</h2>
+                
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80" alt="Implementación de tecnología educativa" class="section-image">
+
+                <h3>📚 Uso Responsable y con Propósito Pedagógico</h3>
+                <p>Toda tecnología implementada debe tener una <strong>justificación pedagógica clara</strong> y ser utilizada de manera consciente y crítica, alineada con objetivos de aprendizaje y el currículo.</p>
+
+                <h3>🎓 Formación y Ciudadanía Digital</h3>
+                <p>La ética se construye mediante educación continua. Es crucial formar a todos los actores:</p>
+                <ul class="styled-list">
+                    <li>Formación docente continua en competencias y ética digital</li>
+                    <li>Educación integrada en derechos digitales y seguridad en línea</li>
+                    <li>Sensibilización para familias y comunidad educativa</li>
+                </ul>
+
+                <h3>🤝 Gobernanza Colaborativa</h3>
+                <p>Establecer comités de ética multidisciplinares con docentes, administradores, estudiantes, padres y expertos para revisar la adopción de nuevas tecnologías y evaluar continuamente su impacto.</p>
+
+                <h3>🌱 Sostenibilidad</h3>
+                <p>Considerar la viabilidad a largo plazo, el impacto ambiental (huella de carbono) y la sostenibilidad social-cultural de las tecnologías implementadas.</p>
+            </section>
+
+            <section id="conclusion" class="section">
+                <h2>✅ Conclusión</h2>
+                
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt="Futuro de la educación con tecnología ética" class="section-image">
+                
+                <p>La implementación de tecnologías digitales e IA en educación es un camino sin retorno. Transitar este camino sin una brújula ética clara conlleva el riesgo significativo de <strong>automatizar la injusticia, la discriminación y la vigilancia</strong>, traicionando el propósito fundamental de la educación.</p>
+
+                <div class="highlight-box">
+                    <strong>🔦 El Faro Ético</strong>
+                    Los principios expuestos en esta wiki —desde la dignidad humana y la privacidad hasta la equidad y la agencia humana— actúan colectivamente como ese "faro" indispensable. Guían a las instituciones para que la búsqueda de innovación y eficiencia tecnológica esté siempre supeditada a la construcción de un ecosistema educativo más justo, humano y reflexivo.
+                </div>
+
+                <p>La tecnología debe servir para <strong>empoderar a cada estudiante</strong> en su ruta de aprendizaje, respetando siempre su dignidad, privacidad, y derecho a una educación equitativa y de calidad.</p>
+            </section>
+
+            <section id="referencias" class="section">
+                <h2>📚 Referencias y Recursos</h2>
+                
+                <h3>📖 Documentos de Referencia</h3>
+                <ul class="styled-list">
+                    <li>UNESCO (2021). <em>Recomendación sobre la Ética de la Inteligencia Artificial</em></li>
+                    <li>Comisión Europea. <em>Directrices Éticas para una IA Fiable</em></li>
+                    <li>UNICEF. <em>Política de IA responsable para la infancia</em></li>
+                </ul>
+
+                <h3>🔗 Enlaces Externos Útiles</h3>
+                <ul class="styled-list">
+                    <li><a href="https://www.unesco.org/es" target="_blank">UNESCO - Recursos sobre Educación Digital</a></li>
+                    <li><a href="https://www.unicef.org/es" target="_blank">UNICEF - Derechos digitales de la infancia</a></li>
+                    <li><a href="https://ec.europa.eu/digital-single-market/en/artificial-intelligence" target="_blank">Comisión Europea - IA y Ética</a></li>
+                </ul>
+
+                <h3>👨‍🏫 Créditos</h3>
+                <p><strong>Autor:</strong> Julio César Valerio Toledo<br>
+                <strong>Institución:</strong> Doctorado en Educación<br>
+                <strong>Docente:</strong> Dra. Julieta Aguilar Sánchez<br>
+                <strong>Fecha:</strong> Noviembre 23, 2025</p>
+            </section>
+
+            <div class="back-to-top">
+                <a href="#inicio">⬆️ Volver al inicio</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p><strong>Wiki: Principios Éticos en Tecnologías Educativas Digitales</strong></p>
+        <p>© 2025 - Doctorado en Educación | Seminario Habilidades Tecnológicas</p>
+        <p>Esta wiki es un recurso educativo para promover el uso ético y responsable de tecnologías en educación</p>
+    </footer>
+</body>
+</html>
